@@ -3,7 +3,6 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 
 from api_yamdb.settings import NAME_MAX_LENGTH, EMAIL_MAX_LENGTH
-
 from .validators import validate_year, check_username
 
 
