@@ -54,7 +54,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: practikum-vm
+          username: mara@practikum-vm
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
