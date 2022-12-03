@@ -106,6 +106,4 @@ python3 manage.py runserver
 2. Получить (GET), удалить (DELETE) пользователя по username - /api/v1/users/{username}/
 3. Получение (GET), удаление (DELETE), изменение отзывов (PUT, PATCH) по id - /api/v1/titles/{title_id}/reviews/
 
-### Ссылка на документацию к проекту
-
-[localhost:8000](http://localhost:8000/redoc)
+![workflow bagde](https://github.com/Filin1985/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
