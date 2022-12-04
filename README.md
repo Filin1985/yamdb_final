@@ -64,7 +64,7 @@ git clone https://github.com/Filin1985/api_yamdb.git
 cd api_yamdb
 ```
 
-3. Переменные окружения
+3. Переменные окружения.
    Шаблон для заполнения ".env"
 
 ```
