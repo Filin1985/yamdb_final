@@ -36,7 +36,7 @@ jobs:
     if: github.ref_name == 'master'
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Login to Docker
@@ -47,7 +47,7 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v3
         with:
-          context: ./api_yamdb
+          context: ./api_yamdb/
           push: true
           tags: ihsmen/yamdb:latest
 
