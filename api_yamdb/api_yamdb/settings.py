@@ -7,7 +7,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'my_key')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['*', ])
 
 # Application definition
 

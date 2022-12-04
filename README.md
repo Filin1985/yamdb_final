@@ -64,40 +64,42 @@ git clone https://github.com/Filin1985/api_yamdb.git
 cd api_yamdb
 ```
 
-3. Устанавливаем виртуальное окружение
+3. Переменные окружения
+   Шаблон для заполнения ".env"
 
 ```
-python3 -m venv venv
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+DB_HOST=db
+DB_PORT=5432
+SECRET_KEY='Cекретный ключ'
+ALLOWED_HOSTS = *
 ```
 
-4. Активируем виртуальное окружение
+6. Выполнить из папки "./infra/" команду создания и запуска контейнеров:
 
 ```
-source venv/bin/activate
+docker-compose up -d --build
 ```
 
-5. Устанавливаем зависимости из файла requirements.txt
+7. Выполнить миграции
 
 ```
-pip install -r requirements.txt
+docker-compose exec web python manage.py migrate
 ```
 
-6. Выполняем миграции
+8. Создать superuser
 
 ```
-python3 manage.py migrate
+docker-compose exec web python manage.py createsuperuser
 ```
 
-7. Загружаем данные в models для тестирования
+9. Собрать статитку
 
 ```
-python3 manage.py loaddatatobase
-```
-
-8. Запускаем проект
-
-```
-python3 manage.py runserver
+docker-compose exec web python manage.py collectstatic --no-input
 ```
 
 ### Примеры запросов
@@ -105,5 +107,11 @@ python3 manage.py runserver
 1. Получить (GET), создать пользователя (POST) - /api/v1/users/
 2. Получить (GET), удалить (DELETE) пользователя по username - /api/v1/users/{username}/
 3. Получение (GET), удаление (DELETE), изменение отзывов (PUT, PATCH) по id - /api/v1/titles/{title_id}/reviews/
+
+### Ссылка на документацию к проекту
+
+[api_yamdb](http://localhost/redoc)
+
+### Actions badge
 
 ![workflow bagde](https://github.com/Filin1985/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
