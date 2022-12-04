@@ -9,7 +9,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['*', ])
 
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
