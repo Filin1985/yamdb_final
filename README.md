@@ -110,7 +110,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 
 ### Ссылка на документацию к проекту
 
-[api_yamdb](http://84.252.141.47/)
+[api_yamdb](http://84.252.141.47/redoc/)
 
 ### Actions badge
 
